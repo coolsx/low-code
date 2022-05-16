@@ -1,0 +1,33 @@
+.leftWrap{
+  position: absolute;
+  left: 20px;
+  top: 140px;
+  bottom: 20px;
+  width: 270px;
+  height: calc(100% - 160px);
+  overflow-y: scroll;
+  h2{
+    font-size: 24px;
+    font-weight: bold;
+  }
+  & > ul{
+    overflow: hidden;
+    li{
+      margin-top: 20px;
+      position: relative;
+      cursor: move;
+      &::after{
+        position: absolute;
+        content: '';
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 9;
+      }
+      &:first-child{
+        margin-top: 0;
+      }
+    }
+  }
+}
